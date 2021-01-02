@@ -1,0 +1,113 @@
+﻿<Window x:Class="pcC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pcC"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
+        mc:Ignorable="d"
+        Title="pc-Cleaner" Height="555.935" Width="800">
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="102" VerticalAlignment="Top" Width="210" Background="#FF3E206D">
+            <fa:FontAwesome Icon="Rocket" Margin="13.163,23.3,126.163,53.3" Height="35.4" Width="90.673" FontSize="22" FontWeight="Bold"/>
+            <TextBlock FontSize="16" FontWeight="Bold" Margin="19.5,30.02,21,22" RenderTransformOrigin="0.268,0.34" Foreground="#FF0016F7"><Run Text=" "/><Run Text="          "/><Run Text="ATHONY"/><LineBreak/><Run Text=" "/><Run Text="       "/><Run Text="PC-CLEANER"/></TextBlock>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="102" VerticalAlignment="Top" Width="582" Margin="210,0,0,0" Background="#FFD89CF6">
+            <TextBlock Text="ANALYSE DE PC NECESSAIRE" Margin="33,0.417,284,80.583" FontSize="20" FontWeight="Bold" Foreground="#FF0A0A83"/>
+
+            <TextBlock Text="Dernère analyse : " Margin="33,35.363,448,49.95"></TextBlock>
+            <TextBlock Text="Dernère MAJ : " Margin="33,52.05,459,37"/>
+            <TextBlock Text="Espace à nettoyer : " Margin="33,67,426,10"/>
+
+            <Grid Grid.Row="2"/>
+            <Button x:Name="Btn_Analiser" Content="Anilyser" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="392,22,0,0" Height="40" Background="#FF3E206D" BorderBrush="#FF6E1CD1" BorderThickness="2" Foreground="White" FontFamily="Stencil" FontSize="20" Click="Btn_Analiser_Click">
+                <Button.OpacityMask>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FFEA7E7E" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.OpacityMask>
+            </Button>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="425" VerticalAlignment="Top" Width="210" Margin="0,102,0,0" Background="#FFF0E3FF">
+            <Button x:Name="V_Ensemble" HorizontalAlignment="Left" VerticalAlignment="Top" Width="210" Height="62" Background="#FFD89CF6" Click="V_Ensemble_Click">
+                <StackPanel>
+                    <fa:FontAwesome Icon="tv" Margin="0,0,5,0" Height="25.4" Width="70.673" FontSize="22" FontWeight="Bold"/>
+                    <TextBlock Width="126.999" Height="17.96" FontSize="16"><Run Text="VUE D'ENSEMBLE"/></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button x:Name="Btn_option" HorizontalAlignment="Left" VerticalAlignment="Top" Width="210" Height="62" Background="#FFD89CF6" Margin="0,192,0,0">
+                <StackPanel>
+                    <fa:FontAwesome Icon="cog" Margin="0,0,5,0" Height="25.4" Width="70.673" FontSize="22" FontWeight="Bold"/>
+                    <TextBlock Width="71" Height="17.96" FontSize="16" FontWeight="Bold"><Run Text="OPTIONS"/></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button x:Name="Btn_History2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="210" Height="62" Background="#FFD89CF6" Margin="0,129,0,0">
+                <StackPanel>
+                    <fa:FontAwesome Icon="History" Margin="0,0,5,0" Height="25.4" Width="70.673" FontSize="22" FontWeight="Bold"/>
+                    <TextBlock Width="71" Height="17.96" FontSize="16" FontWeight="Bold"><Run Text="HISTORIQUE"/></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button x:Name="Btn_Analaise" HorizontalAlignment="Left" VerticalAlignment="Top" Width="210" Height="62" Background="#FFD89CF6" Margin="0,64,0,0">
+                <StackPanel>
+                    <fa:FontAwesome Icon="Refresh" Margin="0,0,5,0" Height="25.4" Width="70.673" FontSize="22" FontWeight="Bold"/>
+                    <TextBlock Width="81" Height="17.96" FontSize="16" FontWeight="Bold"><Run Text="ANALYSER"/></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button x:Name="Btn_Site_web" Content="SITE WEB" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="41" Background="#FFD89CF6" Margin="28,305,0,0" Click="Btn_Site_web_Click"/>
+            <TextBlock Margin="10,399,119,3"><Run Text="version 1.0.0"/></TextBlock>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="425" VerticalAlignment="Top" Width="582" Margin="210,102,0,0" Background="#FFF0E3FF">
+            <StackPanel>
+                <ProgressBar x:Name="Progress_Bar" Maximum="100" Value="0" Height="27" Visibility="Hidden" />
+            </StackPanel>
+            <!--<Grid.ColumnDefinitions>
+                <ColumnDefinition Width="73*"/>
+                <ColumnDefinition Width="509*"/>
+            </Grid.ColumnDefinitions>-->
+            <Button x:Name="Btn_Nettoyer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="165" Margin="18,83,0,0" Height="115" Background="#FF916DD5" Click="Btn_Nettoyer_Click" Grid.ColumnSpan="2">
+                <StackPanel>
+                    <fa:FontAwesome Icon="Rocket" Margin="0,0,5,0" Height="25.4" Width="70.673" FontSize="22" FontWeight="Bold"/>
+                    <TextBlock Width="65" Height="17.96" FontSize="16"><Run Text="NETTOYER"/></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button x:Name="Btn_History" HorizontalAlignment="Left" VerticalAlignment="Top" Width="166" Margin="204,83,0,0" Height="115" Background="#FF916DD5" Click="Btn_History_Click">
+                <StackPanel>
+                    <fa:FontAwesome Icon="History" Margin="0,0,5,0" Height="25.4" Width="70.673" FontSize="22" FontWeight="Bold"/>
+                    <TextBlock Width="90.999" Height="17.96" FontSize="16"><Run Text="HISTORIQUE"/></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button x:Name="Btn_MetAjr" HorizontalAlignment="Left" VerticalAlignment="Top" Width="164" Margin="393,83,0,0" Height="115" Background="#FF916DD5" Click="Btn_MetAjr_Click">
+                <StackPanel>
+                    <fa:FontAwesome Icon="Refresh" Margin="0,0,5,0" Height="25.4" Width="70.673" FontSize="22" FontWeight="Bold"/>
+                    <TextBlock Width="115.999" Height="17.96" FontSize="16"><Run Text="METTRE A JOUR"/></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button x:Name="Exit_Rich" Content="Exit" HorizontalAlignment="Left" Margin="236,383,0,0" VerticalAlignment="Top" Width="75" Click="Exit_Rich_Click" Visibility="Hidden"/>
+
+        </Grid>
+
+
+
+
+
+        <!--<fa:ImageAwesome Icon="Tv" Margin="18,-129,745,129"/>
+        <fa:ImageAwesome Icon="Search" Margin="18,184,745,309"/>
+        <fa:ImageAwesome Icon="History" Margin="18,246,745,252"/>
+        <fa:ImageAwesome Icon="Cog" Margin="18,305,745,184"/>-->
+        <!--<fa:ImageAwesome Icon="Rocket" Margin="294,194,469,295" RenderTransformOrigin="0.451,0.483"/>-->
+        <!--<fa:ImageAwesome Icon="Rocket" Margin="295,198,468,295" RenderTransformOrigin="0.451,0.483"/>-->
+        <!--<fa:ImageAwesome Icon="History" Margin="489,203,274,295"/>-->
+        <!--<fa:ImageAwesome Icon="Refresh" Margin="672,198,91,300"/>-->
+        <TextBlock HorizontalAlignment="Left" Height="1" Margin="-293,293,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="10"/>
+        <RichTextBox x:Name="RichBox" HorizontalAlignment="Left" Height="151" VerticalAlignment="Top" Width="453" Margin="271,331,0,0" Visibility="Hidden">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+    </Grid>
+</Window>
